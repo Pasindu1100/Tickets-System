@@ -17,3 +17,6 @@ app.use('/api/users', require('./routes/authRoutes'));
 app.use('/api/tickets', require('./routes/ticketRoutes'));
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+
+
