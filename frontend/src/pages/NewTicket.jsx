@@ -30,7 +30,7 @@ function NewTicket() {
       await axios.post('/api/tickets', { product, description }, config)
       
       toast.success('Ticket Created!')
-      navigate('/')
+      navigate('/tickets') // Go to Tickets List page   
     } catch (error) {
       toast.error(error.message)
     }
