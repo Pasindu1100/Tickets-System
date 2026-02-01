@@ -35,7 +35,7 @@ function Login() {
       if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data))
         toast.success('Logged in Successfully!')
-        navigate('/new-ticket') // <--- Redirects straight to creation page
+        navigate('/dashboard') // <--- Redirects straight to creation page
       }
     } catch (error) {
       const message = error.response && error.response.data && error.response.data.message

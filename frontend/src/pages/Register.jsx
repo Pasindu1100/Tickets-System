@@ -48,7 +48,7 @@ function Register() {
           // Save the user data (including Token) to LocalStorage
           localStorage.setItem('user', JSON.stringify(response.data))
           toast.success('Registration Successful!')
-          navigate('/') // Send user to Home Page
+          navigate('/dashboard') // Send user to Home Page
         }
       } catch (error) {
         // If error, show the message from the backend

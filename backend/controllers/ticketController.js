@@ -10,6 +10,15 @@ const getTickets = async (req, res) => {
   res.status(200).json(tickets);
 };
 
+const getTicket = async (req, res) => {
+  const ticket = await Ticket.findById(req.params.id)
+
+  if (!ticket) {
+    res.status(404)
+    throw new Error('Ticket not found')
+  }
+}
+
 // @desc    Create new ticket
 // @route   POST /api/tickets
 // @access  Private
@@ -31,4 +40,4 @@ const createTicket = async (req, res) => {
   res.status(201).json(ticket);
 };
 
-module.exports = { getTickets, createTicket };
+module.exports = { getTickets, createTicket,getTicket };
